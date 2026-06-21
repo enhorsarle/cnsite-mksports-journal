@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>MK体育 · 简明指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f4f6;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.65;
+      color: #2c3e4f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 820px;
+      width: 100%;
+    }
+
+    /* 卡片式分区，柔和提升层次 */
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e7ed;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
+      padding: 2rem 2.2rem;
+      margin-bottom: 1.8rem;
+      transition: box-shadow 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0, 20, 30, 0.06);
+    }
+
+    /* 开场短句 — 省去大字号标题，用引语感 */
+    .opening {
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #1f2b36;
+      border-left: 4px solid #8da4b8;
+      padding-left: 1.2rem;
+      margin-bottom: 1.6rem;
+      line-height: 1.7;
+    }
+
+    .opening strong {
+      font-weight: 500;
+      color: #1e3c4f;
+    }
+
+    .lead {
+      margin-top: 0.5rem;
+      font-size: 1.05rem;
+      color: #3d5367;
+    }
+
+    /* 承接段落 */
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #1d3647;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+      border-bottom: 1px dashed #dce3ea;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title i {
+      font-style: normal;
+      background: #e4ebf2;
+      padding: 0 0.45rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      margin-right: 0.3rem;
+    }
+
+    p {
+      margin-bottom: 1.1rem;
+      color: #2b4053;
+    }
+
+    .quiet-link {
+      color: #2b6a8f;
+      text-decoration: none;
+      border-bottom: 1px dotted #b6c9db;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .quiet-link:hover {
+      color: #124263;
+      border-bottom: 1px solid #124263;
+    }
+
+    /* 特点列表 —— 用宽松的装饰列表 */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 0.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.6rem;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 1.8rem;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #1f3b4b;
+      flex: 1 1 180px;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      top: -0.1rem;
+      font-size: 1.9rem;
+      font-weight: 300;
+      color: #7a9bb3;
+      line-height: 1;
+    }
+
+    .feature-list li span {
+      font-weight: 450;
+      color: #1f3e4e;
+    }
+
+    /* 提示 / 温和提醒卡片 */
+    .tip-box {
+      background: #f7fafd;
+      border: 1px solid #dbe3ec;
+      border-radius: 20px;
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+    }
+
+    .tip-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tip-label {
+      display: inline-block;
+      background: #dee9f2;
+      color: #1e3c4e;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 0.8rem;
+    }
+
+    /* faq 摘要（极简） */
+    .faq-mini {
+      margin-top: 0.8rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1d3546;
+      margin-bottom: 0.2rem;
+      font-size: 0.98rem;
+    }
+
+    .faq-a {
+      color: #3d5a6e;
+      font-size: 0.93rem;
+      padding-left: 0.2rem;
+    }
+
+    /* 温和结尾 + 链接嵌入 */
+    .ending {
+      background: #f0f3f7;
+      border: 1px solid #dde4ec;
+      border-radius: 24px;
+      padding: 1.6rem 2rem;
+      text-align: left;
+      margin: 1rem 0 1.6rem;
+    }
+
+    .ending p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+        border-radius: 16px;
+      }
+      .opening {
+        font-size: 1.1rem;
+        padding-left: 0.9rem;
+      }
+      .feature-list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .feature-list li {
+        flex: 1 1 auto;
+      }
+      .ending {
+        padding: 1.3rem 1.2rem;
+      }
+    }
+
+    .footnote {
+      font-size: 0.85rem;
+      color: #6d859b;
+      text-align: center;
+      margin-top: 0.2rem;
+      border-top: 1px solid #dce3ec;
+      padding-top: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 开场短句 -->
+  <div class="card" style="padding-bottom: 1.6rem;">
+    <div class="opening">
+      在出发之前，先看一眼路线图。<br>
+      关于 <strong>MK体育</strong>，这里有一份安静的简明指南。
+    </div>
+    <div class="lead">
+      不需要太多搜索和猜测，下面这些内容可以帮助你更快了解它的基本面貌与访问方式。
+    </div>
+  </div>
+
+  <!-- 承接段落 + 特点列表 -->
+  <div class="card">
+    <div class="section-title"><i>✦</i> 大致轮廓</div>
+    <p>
+      <a href="https://cnsite--mksports.com" class="quiet-link">MK体育</a> 是一个以体育内容为主题的站点，覆盖多个运动项目与相关信息。无论你是关注赛事动态、活动资讯，还是希望了解平台的基本服务，这里都提供了一条相对直接的路径。
+    </p>
+    <p>
+      从导航到内容排布，整体设计偏向清晰和实用。如果你习惯于直接获取信息，而不是在页面之间反复跳转，那么它的结构可能会让你觉得省力。
+    </p>
+
+    <div class="section-title" style="margin-top: 1.6rem; border-bottom-width: 0;"><i>▸</i> 几个特点</div>
+    <ul class="feature-list">
+      <li><span>内容集中</span> · 围绕体育相关话题展开，不分散</li>
+      <li><span>界面简洁</span> · 减少冗余装饰，信息层级清楚</li>
+      <li><span>访问直接</span> · 无需层层点击即可到达主要区域</li>
+      <li><span>适配移动端</span> · 在手机与平板上阅读体验流畅</li>
+    </ul>
+  </div>
+
+  <!-- 场景 / 使用提示 温和提醒 -->
+  <div class="card">
+    <div class="section-title"><i>◈</i> 什么时候可能用得上</div>
+    <p>
+      如果你在寻找一个体育信息聚合的落脚点，或者想浏览不同运动类别的内容更新，<a href="https://cnsite--mksports.com" class="quiet-link">MK体育</a> 可以作为其中一个参考。它适合快速了解，也适合慢慢翻阅。
+    </p>
+    <p>
+      不需要注册或复杂流程，你可以直接从首页开始浏览。保持浏览器书签顺手，下次再来也方便。
+    </p>
+
+    <!-- 极简 FAQ 摘要 -->
+    <div class="tip-box">
+      <div class="tip-label">❔ 常见问题 · 摘要</div>
+      <div class="faq-mini">
+        <div class="faq-item">
+          <div class="faq-q">这个网站主要提供什么？</div>
+          <div class="faq-a">体育内容、活动信息与相关服务入口，内容覆盖面较广。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">需要下载额外软件吗？</div>
+          <div class="faq-a">不需要，直接在浏览器中打开即可，适配电脑与移动设备。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">内容更新频率如何？</div>
+          <div class="faq-a">根据站点运营节奏更新，建议定期回看以获取最新动态。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 温和结尾 + 自然链接 -->
+  <div class="ending">
+    <p style="font-weight: 400;">
+      如果你对体育类站点感兴趣，不妨将 <a href="https://cnsite--mksports.com" class="quiet-link">MK体育</a> 加入你的浏览列表。
+    </p>
+    <p>
+      它不算宏大，但胜在直接。保持平常心，按自己的节奏去探索就好。
+    </p>
+  </div>
+
+  <div class="footnote">
+    简明指南 · 温和叙述
+  </div>
+
+</div>
+</body>
+</html>
