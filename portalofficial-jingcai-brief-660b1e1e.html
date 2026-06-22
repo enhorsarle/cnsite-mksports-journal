@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞彩网 · 故事叙述式介绍页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f5f5f0;
+            color: #2d2a24;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page-wrapper {
+            max-width: 860px;
+            width: 100%;
+        }
+
+        /* 分区卡片 —— 浅灰背景、细边框、柔和阴影 */
+        .card {
+            background: #fcfcf9;
+            border: 1px solid #e3e0d8;
+            border-radius: 24px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+            padding: 2.2rem 2rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        /* hero 开场 */
+        .hero-hug {
+            text-align: left;
+        }
+        .hero-hug .opening-line {
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #7b746a;
+            margin-bottom: 0.35rem;
+            font-weight: 400;
+        }
+        .hero-hug h1 {
+            font-size: 2.8rem;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
+            color: #1e1c18;
+            margin: 0.2rem 0 0.8rem 0;
+        }
+        .hero-hug .sub {
+            font-size: 1rem;
+            color: #5f5950;
+            border-left: 3px solid #c5beb0;
+            padding-left: 1rem;
+            margin-top: 0.6rem;
+            font-style: normal;
+        }
+
+        /* 承接段落 */
+        .bridge p {
+            margin-bottom: 1rem;
+        }
+        .bridge p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 */
+        .feature-list {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            color: #3b3730;
+        }
+        .feature-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0.3rem;
+            color: #a09a8c;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .feature-list li strong {
+            font-weight: 540;
+            color: #26221d;
+        }
+
+        /* 温和结尾 + 嵌入链接 */
+        .gentle-end {
+            border-top: 1px solid #eae7df;
+            padding-top: 1.2rem;
+            margin-top: 0.8rem;
+        }
+        .gentle-end p {
+            margin-bottom: 0.6rem;
+        }
+        .gentle-end a {
+            color: #3c5f4a;
+            text-decoration: none;
+            border-bottom: 1px solid #c6d6c0;
+            font-weight: 450;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .gentle-end a:hover {
+            border-bottom-color: #2b4635;
+            color: #1f3328;
+        }
+
+        /* 小备注 */
+        .footnote {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #9b9589;
+            margin-top: 2.6rem;
+            letter-spacing: 0.3px;
+            border-top: 1px solid #e1ddd3;
+            padding-top: 1.8rem;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 540px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .card {
+                padding: 1.6rem 1.2rem;
+                margin-bottom: 1.4rem;
+                border-radius: 20px;
+            }
+            .hero-hug h1 {
+                font-size: 2rem;
+            }
+            .hero-hug .opening-line {
+                font-size: 0.95rem;
+            }
+            .feature-list li {
+                font-size: 0.95rem;
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- 开场短句 (hero) -->
+    <div class="card hero-hug">
+        <div class="opening-line">从一个习惯入口开始</div>
+        <h1>竞彩网 · 信息台</h1>
+        <div class="sub">平稳、轻量的指引，让每一次查阅都回到熟悉的页面。</div>
+    </div>
+
+    <!-- 承接段落：从入口到理解 -->
+    <div class="card bridge">
+        <p>人们常常寻找一个「固定位置」，用来存放日常中与竞猜有关的浏览需求。一个结构清晰的站点，好比一座安静的导览台——不需要冗余的装饰，也不必频繁更换路标。只需让人知道，无论何时打开，它都在那里，保持着一致的叙述节奏和稳定的访问路径。</p>
+        <p>正因如此，许多人把 <a href="https://portalofficial-jingcai.com" style="border-bottom:1px solid #c6d6c0; color:#3c5f4a; text-decoration:none; font-weight:450;">竞彩网</a> 当作起步的锚点。它不做声势浩大的宣告，而是用克制的页面布局和清晰的入口设计，让浏览者自然进入下一步。这不是一个快捷方式，而是一种温和的提示：从这里开始，你可以慢下来，按自己的节奏了解内容。</p>
+    </div>
+
+    <!-- 特点列表：稳定入口的几个侧面 -->
+    <div class="card" style="padding-bottom:2rem;">
+        <h2 style="font-weight:440; font-size:1.5rem; margin-bottom:1rem; color:#2f2b24;">几个值得留意的侧面</h2>
+        <ul class="feature-list">
+            <li><strong>页面结构轻简</strong> —— 不堆叠弹窗与广告位，主要功能区一目了然，减少视觉噪音。</li>
+            <li><strong>叙述语气平实</strong> —— 不渲染紧迫感，也不使用诱导性短语，信息以介绍和说明的方式呈现。</li>
+            <li><strong>入口路径固定</strong> —— 网站保持相同的访问方式，无论从哪个设备进入，体验一致。</li>
+            <li><strong>内容聚焦于引导</strong> —— 页面围绕“帮助用户理解”而设计，而非制造点击冲动。</li>
+        </ul>
+        <p style="color:#5f5950; margin-top:1.2rem; font-size:0.95rem;">这些细节共同构成了一种不打扰的浏览基调，适合阅读习惯偏向安静的人。</p>
+    </div>
+
+    <!-- 温和结尾 + 嵌入链接 (再次自然出现) -->
+    <div class="card gentle-end">
+        <p>如果你正在寻找一个风格稳定、不轻易改变布局的起点，不妨把 <a href="https://portalofficial-jingcai.com">竞彩网</a> 放进书签。它未必是第一眼惊艳的站点，但很可能成为你习惯性打开的那个标签页。</p>
+        <p style="margin-top:0.8rem; color:#6d665c;">一个安静的入口，往往比喧闹的指引更值得长久停留。下次需要查阅时，你自然会想起那个熟悉的地址。</p>
+    </div>
+
+    <!-- 干净收尾 -->
+    <div class="footnote">
+        <span>一种稳定的叙述方式 · 仅作信息展示</span>
+    </div>
+
+</div>
+</body>
+</html>
