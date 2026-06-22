@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速了解竞彩网 · 从找对地方开始</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9f6f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: #2e2b27;
+            line-height: 1.75;
+            padding: 2rem 1.25rem;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #fffcf8;
+            border-radius: 26px;
+            padding: 2.8rem 2rem 3.2rem;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03), 0 8px 32px rgba(140, 110, 80, 0.06);
+        }
+
+        /* 文章头部 */
+        .article-label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            color: #b39b85;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ece4da;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.8rem;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+            color: #2a241f;
+            margin-bottom: 0.6rem;
+        }
+
+        .lead {
+            font-size: 1.12rem;
+            color: #5f534a;
+            background: #f3ede6;
+            padding: 0.9rem 1.2rem;
+            border-radius: 14px;
+            margin: 1.2rem 0 2rem;
+            border-left: 4px solid #cab7a6;
+        }
+
+        /* 正文排版 */
+        p {
+            margin-bottom: 1.3rem;
+            font-size: 1rem;
+            color: #3b3530;
+        }
+
+        .pull-quote {
+            background: #f4efe9;
+            border-radius: 18px;
+            padding: 1.3rem 1.8rem;
+            margin: 1.8rem 0 2rem;
+            border-left: 6px solid #b3947c;
+            font-style: normal;
+            color: #3f3730;
+            font-weight: 420;
+            box-shadow: inset 0 1px 4px rgba(130, 100, 70, 0.05);
+            position: relative;
+        }
+
+        .pull-quote::before {
+            content: "📌";
+            font-size: 1.1rem;
+            margin-right: 0.6rem;
+            opacity: 0.8;
+        }
+
+        .tip-box {
+            background: #efe7de;
+            padding: 1rem 1.5rem;
+            border-radius: 18px;
+            margin: 1.5rem 0;
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+            border: 1px solid #ddd2c5;
+        }
+
+        .tip-icon {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            flex-shrink: 0;
+        }
+
+        .tip-content {
+            font-size: 0.95rem;
+            color: #4a413b;
+        }
+
+        .tip-content strong {
+            color: #3b2d24;
+        }
+
+        .inline-link {
+            color: #7a5f4b;
+            text-decoration: none;
+            border-bottom: 1.5px solid #dac9ba;
+            transition: border-color 0.2s, color 0.2s;
+            font-weight: 480;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #8d6f58;
+            color: #543f30;
+        }
+
+        .faq-summary {
+            margin: 2.2rem 0 1rem;
+            border-top: 1px solid #e5d9ce;
+            padding-top: 1.6rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.1rem;
+        }
+
+        .faq-q {
+            font-weight: 520;
+            color: #3b3028;
+            display: block;
+            margin-bottom: 0.15rem;
+            font-size: 0.98rem;
+        }
+
+        .faq-a {
+            color: #5f5248;
+            font-size: 0.92rem;
+            padding-left: 0.2rem;
+        }
+
+        .signature {
+            margin-top: 2.8rem;
+            font-size: 0.9rem;
+            color: #9b8a7c;
+            text-align: right;
+            border-top: 1px solid #ece2d8;
+            padding-top: 1.6rem;
+            letter-spacing: 0.02em;
+        }
+
+        .signature span {
+            background: #f1e9e1;
+            padding: 0.15rem 1rem;
+            border-radius: 30px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .page {
+                padding: 1.6rem 1.2rem;
+                border-radius: 18px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .lead {
+                font-size: 1rem;
+                padding: 0.8rem 1rem;
+            }
+            .pull-quote {
+                padding: 1rem 1.2rem;
+            }
+            .tip-box {
+                flex-direction: column;
+                gap: 0.3rem;
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+            .page {
+                padding: 1.2rem 0.8rem;
+            }
+            .pull-quote {
+                padding: 0.9rem 1rem;
+                font-size: 0.93rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="article-label">📋 站点笔记</div>
+
+        <h1>竞彩网是什么？<br>一个新用户的第一印象</h1>
+
+        <div class="lead">
+            第一次听到「竞彩网」这个名字，很容易把它和五花八门的体育预测平台搞混。但如果只看表面就划走，反倒会错过一个更适合安静研究赛事数据的去处。
+        </div>
+
+        <p>
+            说它是信息站也好，说它是工具页也行——<a href="https://portalm-jingcai.com" class="inline-link">竞彩网</a>的首页并没有堆满弹窗和横幅，反而更像一份被整理过的赛事简报。你不需要注册或登录，就能看到当日焦点场次、实时指数变动以及球队近况摘要。对于只想快速了解赛前动态、又不想被广告追着跑的人来说，这种干净感确实难得。
+        </p>
+
+        <p>
+            页面的主区域通常被拆成两块：上面是比赛列表，下面是深度数据。比赛列表按时间轴排列，每场都标出了主客队名称、赔率区间以及开赛倒计时。数据部分则藏得稍微深一点——往下一滑，就能看见历史交锋记录、进球分布和联赛排名走势。没有浮夸的图表，只有表格和百分比，看起来很踏实。
+        </p>
+
+        <!-- 引用 / 提示块 -->
+        <div class="pull-quote">
+            用一句话形容就是：<strong>「不推单、不喊单，只摆事实。」</strong> 如果你习惯自己判断，这里的信息流会特别顺手。
+        </div>
+
+        <p>
+            另外，<a href="https://portalm-jingcai.com" class="inline-link">竞彩网</a>的页面加载速度出乎意料地快，图片压缩得当，文字排版也不拥挤。对于手机用户来说，不需要左右缩放，字体大小刚好能看清赔率数字。这点在同类站点里其实不多见——很多平台为了塞入更多内容，反而把字号压得特别小，看着费劲。
+        </p>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>一个小提示：</strong> 如果你第一次打开，建议先看「今日赛事」模块，那里列出了未来24小时内所有开售场次，并且直接标注了让球数和大小分界线。对比几场之后，你很快就能摸清这个站点的信息组织逻辑。
+            </div>
+        </div>
+
+        <p>
+            当然，任何站点都有它的定位。竞彩网没有社区讨论区，也没有专家直播——它更像一个赛事数据仓库，把所有公开信息摆在你面前，然后由你来做判断。对于独立分析型用户来说，这种克制反而是加分项。
+        </p>
+
+        <!-- FAQ 摘要风格 -->
+        <div class="faq-summary">
+            <div class="faq-item">
+                <span class="faq-q">❓ 这个网站收费吗？</span>
+                <span class="faq-a">目前所有核心数据板块均免费开放，包括赔率对比、赛程预览和历史统计。没有隐藏订阅墙。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-q">❓ 适合新手吗？</span>
+                <span class="faq-a">界面极简，术语都有简要标注。如果对「让球」「大小分」基础概念有了解，上手毫无压力。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-q">❓ 数据更新快吗？</span>
+                <span class="faq-a">基本与主流数据源同步，临场变盘会在1～3分钟内反映到页面上，足够日常参考。</span>
+            </div>
+        </div>
+
+        <div class="signature">
+            <span>📝 不追求热闹，只求信息准确</span>
+        </div>
+    </div>
+</body>
+</html>
